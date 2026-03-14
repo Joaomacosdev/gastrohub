@@ -1,5 +1,9 @@
 # 🍽️ GastroHub
 
+> 📐 **Tech Lead:** consulte o [Planejamento de Execução da Fase 1](./PLANEJAMENTO.md) para o roadmap completo por sprints, critérios de DoD e pontos de atenção técnica.
+
+---
+
 ## 📌 O que o projeto faz
 
 O **GastroHub** é um sistema backend desenvolvido para gerenciamento de usuários em uma plataforma de restaurantes compartilhada.
@@ -20,16 +24,16 @@ A aplicação permite:
 
 <p align="left">
 <img src="https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk"/>
-<img src="https://img.shields.io/badge/Spring_Boot-4.x-brightgreen?style=for-the-badge&logo=springboot"/>
+<img src="https://img.shields.io/badge/Spring_Boot-3.2.x-brightgreen?style=for-the-badge&logo=springboot"/>
 <img src="https://img.shields.io/badge/Spring_Data_JPA-blue?style=for-the-badge&logo=spring"/>
-<img src="https://img.shields.io/badge/Spring_Security-darkgreen?style=for-the-badge&logo=springsecurity"/>
-<img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf"/>
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Spring_Security-6.x-darkgreen?style=for-the-badge&logo=springsecurity"/>
+<img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Flyway-10.x-CC0200?style=for-the-badge&logo=flyway"/>
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=java&logoColor=white"/>
+<img src="https://img.shields.io/badge/JUnit_5-25A162?style=for-the-badge&logo=java&logoColor=white"/>
 <img src="https://img.shields.io/badge/Mockito-6DB33F?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/MapStruct-FF6F00?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger"/>
+<img src="https://img.shields.io/badge/MapStruct-1.5.x-FF6F00?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Swagger-SpringDoc_2.x-85EA2D?style=for-the-badge&logo=swagger"/>
 </p>
 
 ---
@@ -107,15 +111,20 @@ Acesse:
 
 ## 📂 Estrutura do projeto
 
-    src/
-     ├── controller
-     ├── service
-     ├── repository
-     ├── entity
-     ├── dto
-     ├── mapper
-     ├── config
-     └── exception
+    src/main/java/br/com/gastrohub/
+     ├── config/           # CorsConfig, OpenApiConfig
+     ├── infra/
+     │   ├── exception/    # NotFoundException, GlobalExceptionHandler (RFC 7807)
+     │   └── security/     # SecurityConfiguration, JwtAuthFilter, JwtTokenProvider
+     ├── user/
+     │   ├── controller/   # UserController, AuthController
+     │   ├── dto/          # Request e Response DTOs
+     │   ├── entity/       # User, Endereco, enums
+     │   ├── mapper/       # UserMapper (MapStruct)
+     │   ├── repository/   # UserRepository
+     │   ├── service/      # UserService, AuthService e implementações
+     │   └── strategy/     # ValidateUserStrategy
+     └── notification/     # Módulo de notificações (futuro)
 
 ---
 
