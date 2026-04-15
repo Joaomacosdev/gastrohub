@@ -72,8 +72,10 @@ public class Address {
             throw new ValidationException("Cep não pode ser vazio");
         }
 
-        if (!cep.matches("\\d{9}")) {
-            throw new ValidationException("CEP deve conter 9 dígitos numéricos");
+        String cepLimpo = cep.replaceAll("\\D", "");
+
+        if (!cepLimpo.matches("\\d{8}")) {
+            throw new ValidationException("CEP deve conter 8 dígitos numéricos");
         }
     }
 

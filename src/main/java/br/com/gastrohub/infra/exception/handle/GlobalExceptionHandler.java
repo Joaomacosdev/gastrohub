@@ -15,10 +15,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NotFoundException.class)
     public ProblemDetail handleNotFound(NotFoundException ex, HttpServletRequest request) {
       return   ProblemDetailFactory.create(
-                HttpStatus.NOT_FOUND,
-                "Usuário não encontrado",
-                ex.getMessage(),
-                request.getRequestURI()
+              HttpStatus.NOT_FOUND,
+              "NOT_FOUND",
+              "Recurso não encontrado",
+              ex.getMessage(),
+              request.getRequestURI()
         );
     }
 
@@ -26,6 +27,7 @@ public class GlobalExceptionHandler {
     public ProblemDetail handleEmailAlreadyExists(EmailAlreadyExistsException ex, HttpServletRequest request) {
         return ProblemDetailFactory.create(
                 HttpStatus.CONFLICT,
+                "EMAIL_ALREADY_EXISTS",
                 "Email já cadastrado",
                 ex.getMessage(),
                 request.getRequestURI()
@@ -36,6 +38,7 @@ public class GlobalExceptionHandler {
     public ProblemDetail handleEmailLoginAlreadyExists(LoginAlreadyExistsException ex, HttpServletRequest request) {
         return ProblemDetailFactory.create(
                 HttpStatus.CONFLICT,
+                "LOGIN_ALREADY_EXISTS",
                 "Login já cadastrado",
                 ex.getMessage(),
                 request.getRequestURI()
@@ -47,6 +50,7 @@ public class GlobalExceptionHandler {
 
         return ProblemDetailFactory.create(
                 HttpStatus.BAD_REQUEST,
+                "VALIDATION_ERROR",
                 "Erro de validação",
                 ex.getMessage(),
                 request.getRequestURI()
@@ -58,6 +62,7 @@ public class GlobalExceptionHandler {
 
         return ProblemDetailFactory.create(
                 HttpStatus.UNPROCESSABLE_ENTITY,
+                "BUSINESS_RULE_VIOLATION",
                 "Erro de regra de negócio",
                 ex.getMessage(),
                 request.getRequestURI()
@@ -69,8 +74,9 @@ public class GlobalExceptionHandler {
     public ProblemDetail handleGeneric(Exception ex, HttpServletRequest request) {
         return ProblemDetailFactory.create(
                 HttpStatus.INTERNAL_SERVER_ERROR,
-                "Erro interno",
-                ex.getMessage(),
+                "INTERNAL_SERVER_ERROR",
+                "Erro inesperado. Tente novamente mais tarde.",
+                "Ocorreu um erro inesperado. Tente novamente mais tarde.",
                 request.getRequestURI()
         );
     }

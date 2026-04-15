@@ -106,7 +106,7 @@ public class User {
     }
 
     private void validateEmail(String email) {
-        if (email == null || !email.contains("@")) {
+        if (email == null || !email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
             throw new ValidationException("Email inválido");
         }
     }

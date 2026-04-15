@@ -1,16 +1,19 @@
 package br.com.gastrohub.user.service;
 
 import br.com.gastrohub.infra.exception.NotFoundException;
+import br.com.gastrohub.notification.service.EmailService;
 import br.com.gastrohub.user.dto.request.UserRequestDTO;
 import br.com.gastrohub.user.dto.request.UserUpdateDTO;
 import br.com.gastrohub.user.dto.response.UserResponseDTO;
 import br.com.gastrohub.user.entity.User;
+import br.com.gastrohub.user.event.UserCreatedEvent;
 import br.com.gastrohub.user.mapper.UserMapper;
 import br.com.gastrohub.user.repository.UserRepository;
 import br.com.gastrohub.user.strategy.UserUpdateValidationStrategy;
 import br.com.gastrohub.user.strategy.UserValidationStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -29,14 +32,16 @@ public class UserServiceImpl implements UserCommandService, UserQueryService {
     private final List<UserValidationStrategy> userValidators;
     private final List<UserUpdateValidationStrategy> userUpdateValidators;
     private final PasswordEncoder passwordEncoder;
+    private final ApplicationEventPublisher eventPublisher;
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    public UserServiceImpl(UserRepository userRepository, UserMapper mapper, List<UserValidationStrategy> userValidators, List<UserUpdateValidationStrategy> userUpdateValidators, PasswordEncoder passwordEncoder) {
+    public UserServiceImpl(UserRepository userRepository, UserMapper mapper, List<UserValidationStrategy> userValidators, List<UserUpdateValidationStrategy> userUpdateValidators, PasswordEncoder passwordEncoder, ApplicationEventPublisher eventPublisher) {
         this.userRepository = userRepository;
         this.mapper = mapper;
         this.userValidators = userValidators;
         this.userUpdateValidators = userUpdateValidators;
         this.passwordEncoder = passwordEncoder;
+        this.eventPublisher = eventPublisher;
     }
 
     @Transactional
@@ -50,7 +55,7 @@ public class UserServiceImpl implements UserCommandService, UserQueryService {
         user.changeSenha(passwordEncoder.encode(dto.senha()));
 
         User savedUser = userRepository.save(user);
-
+        eventPublisher.publishEvent(new UserCreatedEvent(savedUser));
         return mapper.toResponseDTO(savedUser);
     }
 
