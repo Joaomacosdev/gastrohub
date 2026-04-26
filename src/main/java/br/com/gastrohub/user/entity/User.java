@@ -4,6 +4,9 @@ import br.com.gastrohub.address.entity.Address;
 import br.com.gastrohub.infra.exception.ValidationException;
 import br.com.gastrohub.user.entity.enums.Role;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -11,6 +14,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "users",
         uniqueConstraints = {
@@ -42,6 +48,7 @@ public class User {
     private List<Address> address = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "role", length = 30, nullable = false)
     private Role role;
 
     public User() {
