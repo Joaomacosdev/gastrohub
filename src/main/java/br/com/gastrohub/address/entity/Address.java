@@ -3,6 +3,8 @@ package br.com.gastrohub.address.entity;
 import br.com.gastrohub.infra.exception.ValidationException;
 import br.com.gastrohub.user.entity.User;
 import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -13,6 +15,8 @@ public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @JdbcTypeCode(SqlTypes.VARCHAR)
+    @Column(length = 36)
     private UUID id;
     private String cep;
     private String rua;
