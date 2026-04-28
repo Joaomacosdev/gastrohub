@@ -45,7 +45,7 @@ public class User {
     @Column(name = "senha", length = 255, nullable = false)
     private String senha;
 
-    @Column(name = "data_ultima_alteracao")
+    @Column(name = "data_ultima_alteracao", nullable = false)
     private LocalDateTime dataUltimaAlteracao;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -134,6 +134,13 @@ public class User {
         }
     }
 
+
+    @PrePersist
+    public void prePersist() {
+        if (this.dataUltimaAlteracao == null) {
+            this.dataUltimaAlteracao = LocalDateTime.now();
+        }
+    }
 
     @PreUpdate
     public void preUpdate() {

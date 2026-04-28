@@ -22,6 +22,7 @@ public class Address {
     private String rua;
     private String numero;
     private String cidade;
+    private String estado;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -31,23 +32,31 @@ public class Address {
     }
 
 
-    public Address(String cep, String rua, String numero, String cidade) {
+    public Address(String cep, String rua, String numero, String cidade, String estado) {
         validateCep(cep);
         validateRua(rua);
         validateNumero(numero);
         validateCidade(cidade);
+        validateEstado(estado);
 
         this.cep = cep;
         this.rua = rua;
         this.numero = numero;
         this.cidade = cidade;
+        this.estado = estado;
     }
 
-    public void updateAddress(String cep, String rua, String numero, String cidade) {
+    public void updateAddress(String cep, String rua, String numero, String cidade,  String estado) {
         if (cep != null) changeCep(cep);
         if (rua != null) changeRua(rua);
         if (numero != null) changeNumero(numero);
         if (cidade != null) changeCidade(cidade);
+        if(estado != null) changeEstado(estado);
+    }
+
+    private void changeEstado(String estado) {
+        validateEstado(estado);
+        this.estado = estado;
     }
 
     public void changeCep(String cep) {
@@ -105,6 +114,12 @@ public class Address {
         }
     }
 
+    private void validateEstado(String estado) {
+        if (estado == null || estado.isBlank()) {
+            throw new ValidationException("Estado não pode ser vazio");
+        }
+    }
+
     public UUID getId() {
         return id;
     }
@@ -129,6 +144,10 @@ public class Address {
 
     public String getCidade() {
         return cidade;
+    }
+
+    public String getEstado() {
+        return estado;
     }
 
     public User getUser() {
