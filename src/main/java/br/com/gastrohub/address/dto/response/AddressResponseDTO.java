@@ -7,5 +7,6 @@ public record AddressResponseDTO(
         String cep,
         String rua,
         String numero,
-        String cidade) {
+        String cidade,
+        String estado) {
 }
