@@ -32,9 +32,10 @@ public class SecurityConfiguration {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/v1/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/ping").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/users").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/users/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/v1/users").hasAnyRole("CLIENTE", "DONO_RESTAURANTE")
+                        .requestMatchers(HttpMethod.POST, "/api/v1/users").permitAll()
                         .requestMatchers(HttpMethod.PUT, "/api/v1/users/**").hasAnyRole("CLIENTE", "DONO_RESTAURANTE")
                         .requestMatchers(HttpMethod.DELETE, "/api/v1/users/**").hasRole("DONO_RESTAURANTE")
                         .anyRequest().authenticated()
@@ -48,6 +49,7 @@ public class SecurityConfiguration {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
 
 
 }

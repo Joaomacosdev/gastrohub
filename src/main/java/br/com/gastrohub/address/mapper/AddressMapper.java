@@ -14,7 +14,8 @@ public interface AddressMapper {
                 dto.cep(),
                 dto.rua(),
                 dto.numero(),
-                dto.cidade()
+                dto.cidade(),
+                dto.estado()
         );
     }
 

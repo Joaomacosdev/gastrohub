@@ -80,7 +80,8 @@ public class AddressServiceImpl implements AddressCommandService, AddressQuerySe
                 dto.cep(),
                 dto.rua(),
                 dto.numero(),
-                dto.cidade()
+                dto.cidade(),
+                dto.estado()
         );
 
         return mapper.toResponseDTO(address);

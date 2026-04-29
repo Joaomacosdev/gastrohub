@@ -4,6 +4,11 @@ import br.com.gastrohub.address.entity.Address;
 import br.com.gastrohub.infra.exception.ValidationException;
 import br.com.gastrohub.user.entity.enums.Role;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -11,6 +16,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
+@Data
+//@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "users",
         uniqueConstraints = {
@@ -21,6 +29,8 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @JdbcTypeCode(SqlTypes.VARCHAR)
+    @Column(length = 36)
     private UUID id;
 
     @Column(name = "nome", length = 150, nullable = false)
@@ -35,13 +45,14 @@ public class User {
     @Column(name = "senha", length = 255, nullable = false)
     private String senha;
 
-    @Column(name = "data_ultima_alteracao")
+    @Column(name = "data_ultima_alteracao", nullable = false)
     private LocalDateTime dataUltimaAlteracao;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> address = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "role", length = 30, nullable = false)
     private Role role;
 
     public User() {
@@ -123,6 +134,13 @@ public class User {
         }
     }
 
+
+    @PrePersist
+    public void prePersist() {
+        if (this.dataUltimaAlteracao == null) {
+            this.dataUltimaAlteracao = LocalDateTime.now();
+        }
+    }
 
     @PreUpdate
     public void preUpdate() {
