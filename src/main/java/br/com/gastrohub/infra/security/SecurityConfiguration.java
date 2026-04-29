@@ -1,11 +1,8 @@
 package br.com.gastrohub.infra.security;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -35,9 +32,10 @@ public class SecurityConfiguration {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/v1/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/ping").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/users").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/users/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/v1/users").hasAnyRole("CLIENTE", "DONO_RESTAURANTE")
+                        .requestMatchers(HttpMethod.POST, "/api/v1/users").permitAll()
                         .requestMatchers(HttpMethod.PUT, "/api/v1/users/**").hasAnyRole("CLIENTE", "DONO_RESTAURANTE")
                         .requestMatchers(HttpMethod.DELETE, "/api/v1/users/**").hasRole("DONO_RESTAURANTE")
                         .anyRequest().authenticated()
@@ -51,6 +49,4 @@ public class SecurityConfiguration {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-  
-  
 }
