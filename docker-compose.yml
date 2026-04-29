@@ -39,4 +39,5 @@ services:
      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQLDialect
      MAIL_USER: ${MAIL_USER}
      MAIL_PASSWORD: ${MAIL_PASSWORD}
-
+     JWT_SECRET: ${JWT_SECRET}
+     JWT_EXPIRATION: ${JWT_EXPIRATION}
