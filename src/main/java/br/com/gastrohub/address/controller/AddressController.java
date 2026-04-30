@@ -7,6 +7,7 @@ import br.com.gastrohub.address.service.AddressCommandService;
 import br.com.gastrohub.address.service.AddressQueryService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -27,8 +28,13 @@ public class AddressController {
     }
 
     @PostMapping
-    public ResponseEntity<AddressResponseDTO> createAddress( @Valid @RequestBody AddressRequestDTO dto, UriComponentsBuilder uriBuilder){
-        AddressResponseDTO addressResponse = addressCommandService.createAddress(dto);
+    public ResponseEntity<AddressResponseDTO> createAddress(
+            @Valid @RequestBody AddressRequestDTO dto,
+            Authentication authentication,
+            UriComponentsBuilder uriBuilder
+    ){
+        UUID userId = UUID.fromString(authentication.getDetails().toString());
+        AddressResponseDTO addressResponse = addressCommandService.createAddress(dto, userId);
         URI uri = uriBuilder.path("/{id}").buildAndExpand(addressResponse.id()).toUri();
         return ResponseEntity.created(uri).body(addressResponse);
     }
