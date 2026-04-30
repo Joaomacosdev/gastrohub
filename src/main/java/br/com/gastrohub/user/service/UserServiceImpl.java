@@ -2,6 +2,7 @@ package br.com.gastrohub.user.service;
 
 import br.com.gastrohub.infra.exception.NotFoundException;
 import br.com.gastrohub.notification.service.EmailService;
+import br.com.gastrohub.user.dto.request.UpdatePasswordRequest;
 import br.com.gastrohub.user.dto.request.UserRequestDTO;
 import br.com.gastrohub.user.dto.request.UserUpdateDTO;
 import br.com.gastrohub.user.dto.response.UserResponseDTO;
@@ -21,6 +22,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -112,6 +114,17 @@ public class UserServiceImpl implements UserCommandService, UserQueryService {
 
         User user = searchUser(id);
         userRepository.delete(user);
+    }
+
+
+    @Transactional
+    @Override
+    public void updatePassword(UpdatePasswordRequest updatePassword, UUID userID) {
+        logger.info("Atualizando Senha de usuário");
+        var userToUpdate = userRepository.getById(userID);
+        userToUpdate.setSenha(passwordEncoder.encode(updatePassword.password()));
+        userToUpdate.setDataUltimaAlteracao(LocalDateTime.now());
+        userRepository.save(userToUpdate);
     }
 
     private User searchUser(UUID id) {
