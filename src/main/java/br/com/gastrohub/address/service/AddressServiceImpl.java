@@ -36,11 +36,11 @@ public class AddressServiceImpl implements AddressCommandService, AddressQuerySe
 
     @Transactional
     @Override
-    public AddressResponseDTO createAddress(AddressRequestDTO dto) {
+    public AddressResponseDTO createAddress(AddressRequestDTO dto, UUID userId) {
 
         logger.debug("Criando endereço com cep: {}", dto.cep());
 
-        User user = searchUser(dto.id());
+        User user = searchUser(userId);
 
         Address address = mapper.toEntity(dto);
         address.setUser(user);

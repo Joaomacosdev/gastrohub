@@ -7,7 +7,7 @@ import br.com.gastrohub.address.dto.response.AddressResponseDTO;
 import java.util.UUID;
 
 public interface AddressCommandService {
-    AddressResponseDTO createAddress(AddressRequestDTO dto);
+    AddressResponseDTO createAddress(AddressRequestDTO dto, UUID userId);
     AddressResponseDTO updateAddress(UUID id, AddressUpdateDTO dto);
     void deleteAddress(UUID id);
 }
