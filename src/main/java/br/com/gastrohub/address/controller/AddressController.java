@@ -1,5 +1,6 @@
 package br.com.gastrohub.address.controller;
 
+import br.com.gastrohub.address.controller.docs.AddressControllerDocs;
 import br.com.gastrohub.address.dto.request.AddressRequestDTO;
 import br.com.gastrohub.address.dto.request.AddressUpdateDTO;
 import br.com.gastrohub.address.dto.response.AddressResponseDTO;
@@ -17,7 +18,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/address")
-public class AddressController {
+public class AddressController implements AddressControllerDocs {
 
     private final AddressCommandService addressCommandService;
     private final AddressQueryService addressQueryService;
@@ -40,7 +41,7 @@ public class AddressController {
     }
 
     @GetMapping("/{id}")
-    private ResponseEntity<AddressResponseDTO> findById(@PathVariable UUID id){
+    public ResponseEntity<AddressResponseDTO> findById(@PathVariable UUID id){
         return ResponseEntity.ok().body(addressQueryService.findById(id));
     }
 
