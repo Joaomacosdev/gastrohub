@@ -1,5 +1,6 @@
 package br.com.gastrohub.user.service;
 
+import br.com.gastrohub.user.dto.request.UpdatePasswordRequest;
 import br.com.gastrohub.user.dto.request.UserRequestDTO;
 import br.com.gastrohub.user.dto.request.UserUpdateDTO;
 import br.com.gastrohub.user.dto.response.UserResponseDTO;
@@ -11,5 +12,5 @@ public interface UserCommandService {
     UserResponseDTO createUser(UserRequestDTO dto);
     UserResponseDTO updateUser(UUID id, UserUpdateDTO dto);
     void deleteUser(UUID id);
-
+    void updatePassword(UpdatePasswordRequest password, UUID userID);
 }
