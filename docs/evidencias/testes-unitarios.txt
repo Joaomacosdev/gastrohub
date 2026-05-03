@@ -32,6 +32,8 @@ WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::objectFieldOffset has been called by lombok.permit.Permit
 WARNING: Please consider reporting this to the maintainers of class lombok.permit.Permit
 WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[INFO] /C:/Users/vine/Desktop/Workspace/projetos/java/gastrohub/src/test/java/br/com/gastrohub/user/service/UserServiceImplTest.java: C:\Users\vine\Desktop\Workspace\projetos\java\gastrohub\src\test\java\br\com\gastrohub\user\service\UserServiceImplTest.java uses or overrides a deprecated API.
+[INFO] /C:/Users/vine/Desktop/Workspace/projetos/java/gastrohub/src/test/java/br/com/gastrohub/user/service/UserServiceImplTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] 
 [INFO] --- surefire:3.1.2:test (default-test) @ gastrohub ---
 [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
@@ -40,7 +42,7 @@ WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running br.com.gastrohub.ApiIntegrationTest
-15:42:59.067 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.gastrohub.GastrohubApplication for test class br.com.gastrohub.ApiIntegrationTest
+22:21:59.241 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.gastrohub.GastrohubApplication for test class br.com.gastrohub.ApiIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -50,43 +52,43 @@ WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v3.2.12)
 
-2026-05-01T15:42:59.481-03:00  INFO 33636 --- [gastrohub] [           main] br.com.gastrohub.ApiIntegrationTest      : Starting ApiIntegrationTest using Java 25.0.2 with PID 33636 (started by vine in C:\Users\vine\Desktop\Workspace\projetos\java\gastrohub)
-2026-05-01T15:42:59.481-03:00 DEBUG 33636 --- [gastrohub] [           main] br.com.gastrohub.ApiIntegrationTest      : Running with Spring Boot v3.2.12, Spring v6.1.15
-2026-05-01T15:42:59.482-03:00  INFO 33636 --- [gastrohub] [           main] br.com.gastrohub.ApiIntegrationTest      : The following 1 profile is active: "test"
-2026-05-01T15:42:59.505-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@29b732a2
-2026-05-01T15:43:00.324-03:00  INFO 33636 --- [gastrohub] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-01T15:43:00.428-03:00  INFO 33636 --- [gastrohub] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 2 JPA repository interfaces.
-2026-05-01T15:43:01.500-03:00  INFO 33636 --- [gastrohub] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-05-01T15:43:01.571-03:00  INFO 33636 --- [gastrohub] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2026-05-01T15:43:01.608-03:00  INFO 33636 --- [gastrohub] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-05-01T15:43:01.884-03:00  INFO 33636 --- [gastrohub] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-01T15:43:01.907-03:00  INFO 33636 --- [gastrohub] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-01T15:43:02.091-03:00  INFO 33636 --- [gastrohub] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:gastrohub_test user=SA
-2026-05-01T15:43:02.092-03:00  INFO 33636 --- [gastrohub] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-01T15:43:02.115-03:00  WARN 33636 --- [gastrohub] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-01T15:43:02.882-03:00  INFO 33636 --- [gastrohub] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-01T15:43:02.923-03:00  INFO 33636 --- [gastrohub] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-01T15:43:03.400-03:00  WARN 33636 --- [gastrohub] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-01T15:43:03.418-03:00  WARN 33636 --- [gastrohub] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-05-02T22:21:59.539-03:00  INFO 9504 --- [gastrohub] [           main] br.com.gastrohub.ApiIntegrationTest      : Starting ApiIntegrationTest using Java 25.0.2 with PID 9504 (started by vine in C:\Users\vine\Desktop\Workspace\projetos\java\gastrohub)
+2026-05-02T22:21:59.540-03:00 DEBUG 9504 --- [gastrohub] [           main] br.com.gastrohub.ApiIntegrationTest      : Running with Spring Boot v3.2.12, Spring v6.1.15
+2026-05-02T22:21:59.541-03:00  INFO 9504 --- [gastrohub] [           main] br.com.gastrohub.ApiIntegrationTest      : The following 1 profile is active: "test"
+2026-05-02T22:21:59.554-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1162410a
+2026-05-02T22:22:00.139-03:00  INFO 9504 --- [gastrohub] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T22:22:00.197-03:00  INFO 9504 --- [gastrohub] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2026-05-02T22:22:00.554-03:00  INFO 9504 --- [gastrohub] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T22:22:00.592-03:00  INFO 9504 --- [gastrohub] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2026-05-02T22:22:00.613-03:00  INFO 9504 --- [gastrohub] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-02T22:22:00.815-03:00  INFO 9504 --- [gastrohub] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T22:22:00.833-03:00  INFO 9504 --- [gastrohub] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T22:22:00.952-03:00  INFO 9504 --- [gastrohub] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:gastrohub_test user=SA
+2026-05-02T22:22:00.953-03:00  INFO 9504 --- [gastrohub] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T22:22:00.967-03:00  WARN 9504 --- [gastrohub] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T22:22:01.484-03:00  INFO 9504 --- [gastrohub] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T22:22:01.509-03:00  INFO 9504 --- [gastrohub] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T22:22:01.858-03:00  WARN 9504 --- [gastrohub] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T22:22:01.873-03:00  WARN 9504 --- [gastrohub] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: a1227ef5-9dd8-435f-b32d-3beffc222b51
+Using generated security password: 9ef65377-2fa5-4717-9ad2-e6a5d5bdbcb3
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-05-01T15:43:03.575-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2026-05-02T22:22:01.981-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 20 mappings in 'requestMappingHandlerMapping'
 WARNING: A restricted method in java.lang.System has been called
 WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/C:/Users/vine/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.33/tomcat-embed-core-10.1.33.jar)
 WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
 WARNING: Restricted methods will be blocked in a future release unless native access is enabled
 
-2026-05-01T15:43:03.665-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-05-01T15:43:03.695-03:00  INFO 33636 --- [gastrohub] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b19ee18, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2561d61, org.springframework.security.web.context.SecurityContextHolderFilter@77d7d2d0, org.springframework.security.web.header.HeaderWriterFilter@732ae29c, org.springframework.security.web.authentication.logout.LogoutFilter@2b20caed, br.com.gastrohub.infra.security.JwtAuthenticationFilter@6259d7a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fa0943d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39d44217, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@374712f8, org.springframework.security.web.session.SessionManagementFilter@18918ab9, org.springframework.security.web.access.ExceptionTranslationFilter@5a86112a, org.springframework.security.web.access.intercept.AuthorizationFilter@63e54c66]
-2026-05-01T15:43:03.850-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-05-01T15:43:03.877-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-05-01T15:43:04.083-03:00  INFO 33636 --- [gastrohub] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-05-01T15:43:04.083-03:00  INFO 33636 --- [gastrohub] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-05-01T15:43:04.084-03:00  INFO 33636 --- [gastrohub] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-05-01T15:43:04.102-03:00  INFO 33636 --- [gastrohub] [           main] br.com.gastrohub.ApiIntegrationTest      : Started ApiIntegrationTest in 4.906 seconds (process running for 5.791)
+2026-05-02T22:22:02.051-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-05-02T22:22:02.076-03:00  INFO 9504 --- [gastrohub] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@602d5417, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75128cf, org.springframework.security.web.context.SecurityContextHolderFilter@54519d74, org.springframework.security.web.header.HeaderWriterFilter@5fa0943d, org.springframework.security.web.authentication.logout.LogoutFilter@22b2d9e3, br.com.gastrohub.infra.security.JwtAuthenticationFilter@33ccab9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d00c2ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52ec5ba6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@668ea404, org.springframework.security.web.session.SessionManagementFilter@6c54d0dc, org.springframework.security.web.access.ExceptionTranslationFilter@12f32f99, org.springframework.security.web.access.intercept.AuthorizationFilter@71c2cb26]
+2026-05-02T22:22:02.179-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-05-02T22:22:02.208-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-05-02T22:22:02.336-03:00  INFO 9504 --- [gastrohub] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-02T22:22:02.336-03:00  INFO 9504 --- [gastrohub] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-02T22:22:02.337-03:00  INFO 9504 --- [gastrohub] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-02T22:22:02.353-03:00  INFO 9504 --- [gastrohub] [           main] br.com.gastrohub.ApiIntegrationTest      : Started ApiIntegrationTest in 3.03 seconds (process running for 3.65)
 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
 WARNING: A Java agent has been loaded dynamically (C:\Users\vine\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
@@ -96,199 +98,199 @@ WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::objectFieldOffset has been called by net.bytebuddy.dynamic.loading.ClassInjector$UsingUnsafe$Dispatcher$CreationAction (file:/C:/Users/vine/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar)
 WARNING: Please consider reporting this to the maintainers of class net.bytebuddy.dynamic.loading.ClassInjector$UsingUnsafe$Dispatcher$CreationAction
 WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
-2026-05-01T15:43:04.598-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /ping
-2026-05-01T15:43:04.604-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:04.606-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /ping
-2026-05-01T15:43:04.608-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.health.contoller.HealthController#health()
-2026-05-01T15:43:04.627-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
-2026-05-01T15:43:04.628-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["pong"]
-2026-05-01T15:43:04.650-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
-2026-05-01T15:43:04.651-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:04.651-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
-2026-05-01T15:43:04.651-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
-2026-05-01T15:43:04.698-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Cliente Teste, email=cliente@email.com, login=cliente01, senha=123456, role=ROLE (truncated)...]
-2026-05-01T15:43:04.781-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
-2026-05-01T15:43:04.907-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:04.909-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=53765edd-9400-41a9-a387-d8113441ffdf, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:04.949-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/address
-2026-05-01T15:43:04.949-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:04.950-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
-2026-05-01T15:43:04.951-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
-2026-05-01T15:43:04.951-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:04.951-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
-2026-05-01T15:43:04.951-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
-2026-05-01T15:43:04.954-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=123456]]
-2026-05-01T15:43:05.080-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.081-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=53765edd-9400-41a9-a387-d8113441ffdf, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:05.083-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/address
-2026-05-01T15:43:05.107-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/address
-2026-05-01T15:43:05.108-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#createAddress(AddressRequestDTO, Authentication, UriComponentsBuilder)
-2026-05-01T15:43:05.109-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AddressRequestDTO[cep=01310-100, rua=Avenida Paulista, numero=1000, cidade=Sao Paulo, estado=SP]]
-2026-05-01T15:43:05.110-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando endere�o com cep: 01310-100
-2026-05-01T15:43:05.122-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.122-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AddressResponseDTO[id=2852d998-26a1-4a2f-92c2-bbed308ad541, cep=01310-100, rua=Avenida Paulista, num (truncated)...]
-2026-05-01T15:43:05.124-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/address
-2026-05-01T15:43:05.126-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/address
-2026-05-01T15:43:05.126-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#findAll()
-2026-05-01T15:43:05.128-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando todos os endere�o
-2026-05-01T15:43:05.132-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.132-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AddressResponseDTO[id=6c1201ee-a0d7-4fd3-8572-4b5d3838bfe6, cep=01001-000, rua=Praca da Se, numero= (truncated)...]
-2026-05-01T15:43:05.143-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/address/2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.145-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/address/2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.146-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#findById(UUID)
-2026-05-01T15:43:05.147-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando endere�o por ID: 2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.150-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.150-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AddressResponseDTO[id=2852d998-26a1-4a2f-92c2-bbed308ad541, cep=01310-100, rua=Avenida Paulista, num (truncated)...]
-2026-05-01T15:43:05.151-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/address/2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.153-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/address/2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.153-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#updateAddress(UUID, AddressUpdateDTO)
-2026-05-01T15:43:05.155-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AddressUpdateDTO[cep=01311-000, rua=Rua Atualizada, numero=200, cidade=Sao Paulo, estado=SP]]
-2026-05-01T15:43:05.157-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando endere�o ID: 2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.165-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.165-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AddressResponseDTO[id=2852d998-26a1-4a2f-92c2-bbed308ad541, cep=01311-000, rua=Rua Atualizada, numer (truncated)...]
-2026-05-01T15:43:05.167-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/v1/address/2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.169-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured DELETE /api/v1/address/2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.169-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#deleteAddress(UUID)
-2026-05-01T15:43:05.170-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Deletando endere�o ID: 2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.177-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.177-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
-2026-05-01T15:43:05.179-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/address/2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.181-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/address/2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.181-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#findById(UUID)
-2026-05-01T15:43:05.182-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando endere�o por ID: 2852d998-26a1-4a2f-92c2-bbed308ad541
-2026-05-01T15:43:05.185-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler br.com.gastrohub.infra.exception.handle.GlobalExceptionHandler#handleNotFound(NotFoundException, HttpServletRequest)
-2026-05-01T15:43:05.192-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [*/*] and supported [application/problem+json]
-2026-05-01T15:43:05.195-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='https://api.gastrohub.com/errors/NOT_FOUND', title='Recurso n�o encontrado', sta (truncated)...]
-2026-05-01T15:43:05.196-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [br.com.gastrohub.infra.exception.NotFoundException: Endere�o n�o encontrado com id: 2852d998-26a1-4a2f-92c2-bbed308ad541]
-2026-05-01T15:43:05.210-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
-2026-05-01T15:43:05.210-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.210-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
-2026-05-01T15:43:05.210-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
-2026-05-01T15:43:05.211-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Cliente Teste, email=cliente@email.com, login=cliente01, senha=123456, role=ROLE (truncated)...]
-2026-05-01T15:43:05.211-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
-2026-05-01T15:43:05.266-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.266-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=55c69bf7-fea9-4fde-a5c7-73258b83a79d, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:05.267-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
-2026-05-01T15:43:05.268-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.268-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
-2026-05-01T15:43:05.268-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
-2026-05-01T15:43:05.268-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=123456]]
-2026-05-01T15:43:05.320-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.320-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=55c69bf7-fea9-4fde-a5c7-73258b83a79d, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:05.322-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users
-2026-05-01T15:43:05.322-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.322-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users
-2026-05-01T15:43:05.322-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#findAll(Pageable)
-2026-05-01T15:43:05.327-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando todos os usu�rios
-2026-05-01T15:43:05.327-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando usu�rios - p�gina: 0, tamanho: 10
-2026-05-01T15:43:05.338-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.338-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 1 containing br.com.gastrohub.user.dto.response.UserResponseDTO instances]
-2026-05-01T15:43:05.344-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users/search
-2026-05-01T15:43:05.345-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.345-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users/search
-2026-05-01T15:43:05.345-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#searchByNome(String, Pageable)
-2026-05-01T15:43:05.355-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando  usu�rios com nomes
-2026-05-01T15:43:05.368-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.369-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 1 containing br.com.gastrohub.user.dto.response.UserResponseDTO instances]
-2026-05-01T15:43:05.374-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users/55c69bf7-fea9-4fde-a5c7-73258b83a79d
-2026-05-01T15:43:05.374-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.375-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users/55c69bf7-fea9-4fde-a5c7-73258b83a79d
-2026-05-01T15:43:05.375-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#findById(UUID)
-2026-05-01T15:43:05.376-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando usu�rio por ID: 55c69bf7-fea9-4fde-a5c7-73258b83a79d
-2026-05-01T15:43:05.378-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.379-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=55c69bf7-fea9-4fde-a5c7-73258b83a79d, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:05.380-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
-2026-05-01T15:43:05.380-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.380-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
-2026-05-01T15:43:05.380-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
-2026-05-01T15:43:05.381-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=123456]]
-2026-05-01T15:43:05.433-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.433-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=55c69bf7-fea9-4fde-a5c7-73258b83a79d, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:05.434-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/55c69bf7-fea9-4fde-a5c7-73258b83a79d
-2026-05-01T15:43:05.436-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/55c69bf7-fea9-4fde-a5c7-73258b83a79d
-2026-05-01T15:43:05.436-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#updateUser(UUID, UserUpdateDTO)
-2026-05-01T15:43:05.439-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserUpdateDTO[nome=Cliente Atualizado, email=cliente.atualizado@email.com, login=cliente01, role=ROL (truncated)...]
-2026-05-01T15:43:05.443-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando usu�rio ID: 55c69bf7-fea9-4fde-a5c7-73258b83a79d
-2026-05-01T15:43:05.448-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.449-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=55c69bf7-fea9-4fde-a5c7-73258b83a79d, nome=Cliente Atualizado, email=cliente.atua (truncated)...]
-2026-05-01T15:43:05.459-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
-2026-05-01T15:43:05.459-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.459-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
-2026-05-01T15:43:05.459-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
-2026-05-01T15:43:05.460-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Cliente Teste, email=cliente@email.com, login=cliente01, senha=123456, role=ROLE (truncated)...]
-2026-05-01T15:43:05.460-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
-2026-05-01T15:43:05.515-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.515-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=ae07df04-6e28-4605-9338-1593515882b0, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:05.517-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
-2026-05-01T15:43:05.517-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.517-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
-2026-05-01T15:43:05.517-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
-2026-05-01T15:43:05.518-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Outro Cliente, email=cliente@email.com, login=cliente02, senha=123456, role=ROLE (truncated)...]
-2026-05-01T15:43:05.518-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
-2026-05-01T15:43:05.520-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler br.com.gastrohub.infra.exception.handle.GlobalExceptionHandler#handleEmailAlreadyExists(EmailAlreadyExistsException, HttpServletRequest)
-2026-05-01T15:43:05.521-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [*/*] and supported [application/problem+json]
-2026-05-01T15:43:05.521-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='https://api.gastrohub.com/errors/EMAIL_ALREADY_EXISTS', title='Email j� cadastra (truncated)...]
-2026-05-01T15:43:05.521-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [br.com.gastrohub.infra.exception.EmailAlreadyExistsException: Email j� cadastrado: cliente@email.com]
-2026-05-01T15:43:05.522-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
-2026-05-01T15:43:05.522-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.522-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
-2026-05-01T15:43:05.522-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
-2026-05-01T15:43:05.523-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=senha-errada]]
-2026-05-01T15:43:05.575-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler br.com.gastrohub.infra.exception.handle.GlobalExceptionHandler#handleBusiness(BusinessException, HttpServletRequest)
-2026-05-01T15:43:05.575-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [*/*] and supported [application/problem+json]
-2026-05-01T15:43:05.575-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='https://api.gastrohub.com/errors/BUSINESS_RULE_VIOLATION', title='Erro de regra  (truncated)...]
-2026-05-01T15:43:05.576-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [br.com.gastrohub.infra.exception.BusinessException: Senha inv�lida]
-2026-05-01T15:43:05.586-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
-2026-05-01T15:43:05.586-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.586-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
-2026-05-01T15:43:05.587-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
-2026-05-01T15:43:05.587-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Cliente Teste, email=cliente@email.com, login=cliente01, senha=123456, role=ROLE (truncated)...]
-2026-05-01T15:43:05.588-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
-2026-05-01T15:43:05.643-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.643-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=f8b12533-9e52-4c8e-abc7-1835ae82943f, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:05.645-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
-2026-05-01T15:43:05.645-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.645-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
-2026-05-01T15:43:05.645-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
-2026-05-01T15:43:05.646-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Dono Restaurante, email=dono@email.com, login=dono01, senha=123456, role=ROLE_DO (truncated)...]
-2026-05-01T15:43:05.647-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: dono@email.com
-2026-05-01T15:43:05.704-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.704-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=ebea53d1-ee72-4131-b0d9-56013edb4725, nome=Dono Restaurante, email=dono@email.com (truncated)...]
-2026-05-01T15:43:05.706-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
-2026-05-01T15:43:05.706-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.706-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
-2026-05-01T15:43:05.706-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
-2026-05-01T15:43:05.707-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=123456]]
-2026-05-01T15:43:05.763-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.763-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=f8b12533-9e52-4c8e-abc7-1835ae82943f, nome=Cliente Teste, email=cliente@email.com (truncated)...]
-2026-05-01T15:43:05.765-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
-2026-05-01T15:43:05.765-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.765-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
-2026-05-01T15:43:05.765-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
-2026-05-01T15:43:05.765-03:00 DEBUG 33636 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=dono01, senha=123456]]
-2026-05-01T15:43:05.818-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.818-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=ebea53d1-ee72-4131-b0d9-56013edb4725, nome=Dono Restaurante, email=dono@email.com (truncated)...]
-2026-05-01T15:43:05.820-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/v1/users/f8b12533-9e52-4c8e-abc7-1835ae82943f
-2026-05-01T15:43:05.821-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
-2026-05-01T15:43:05.823-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/v1/users/f8b12533-9e52-4c8e-abc7-1835ae82943f
-2026-05-01T15:43:05.824-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured DELETE /api/v1/users/f8b12533-9e52-4c8e-abc7-1835ae82943f
-2026-05-01T15:43:05.824-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#deleteUser(UUID)
-2026-05-01T15:43:05.825-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Deletando usu�rio ID: f8b12533-9e52-4c8e-abc7-1835ae82943f
-2026-05-01T15:43:05.829-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-05-01T15:43:05.829-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
-2026-05-01T15:43:05.830-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users/f8b12533-9e52-4c8e-abc7-1835ae82943f
-2026-05-01T15:43:05.830-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-05-01T15:43:05.830-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users/f8b12533-9e52-4c8e-abc7-1835ae82943f
-2026-05-01T15:43:05.830-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#findById(UUID)
-2026-05-01T15:43:05.831-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando usu�rio por ID: f8b12533-9e52-4c8e-abc7-1835ae82943f
-2026-05-01T15:43:05.833-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler br.com.gastrohub.infra.exception.handle.GlobalExceptionHandler#handleNotFound(NotFoundException, HttpServletRequest)
-2026-05-01T15:43:05.833-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [*/*] and supported [application/problem+json]
-2026-05-01T15:43:05.833-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='https://api.gastrohub.com/errors/NOT_FOUND', title='Recurso n�o encontrado', sta (truncated)...]
-2026-05-01T15:43:05.833-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [br.com.gastrohub.infra.exception.NotFoundException: Usu�rio n�o encontrado com id: f8b12533-9e52-4c8e-abc7-1835ae82943f]
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.024 s -- in br.com.gastrohub.ApiIntegrationTest
+2026-05-02T22:22:02.698-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /ping
+2026-05-02T22:22:02.702-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:02.703-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /ping
+2026-05-02T22:22:02.705-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.health.contoller.HealthController#health()
+2026-05-02T22:22:02.718-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2026-05-02T22:22:02.719-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["pong"]
+2026-05-02T22:22:02.737-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
+2026-05-02T22:22:02.737-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:02.737-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
+2026-05-02T22:22:02.737-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
+2026-05-02T22:22:02.777-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Cliente Teste, email=cliente@email.com, login=cliente01, senha=123456, role=ROLE (truncated)...]
+2026-05-02T22:22:02.837-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
+2026-05-02T22:22:02.952-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:02.953-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=4c452fd5-5eb3-49ff-8b5d-27f9e29a1d81, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:02.988-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/address
+2026-05-02T22:22:02.989-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:02.990-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-05-02T22:22:02.991-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-05-02T22:22:02.991-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:02.991-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-05-02T22:22:02.991-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
+2026-05-02T22:22:02.993-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=123456]]
+2026-05-02T22:22:03.096-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.097-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=4c452fd5-5eb3-49ff-8b5d-27f9e29a1d81, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:03.098-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/address
+2026-05-02T22:22:03.116-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/address
+2026-05-02T22:22:03.116-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#createAddress(AddressRequestDTO, Authentication, UriComponentsBuilder)
+2026-05-02T22:22:03.117-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AddressRequestDTO[cep=01310-100, rua=Avenida Paulista, numero=1000, cidade=Sao Paulo, estado=SP]]
+2026-05-02T22:22:03.118-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando endere�o com cep: 01310-100
+2026-05-02T22:22:03.126-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.126-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AddressResponseDTO[id=85fc05f2-04cf-49fa-9ba0-e9003b467778, cep=01310-100, rua=Avenida Paulista, num (truncated)...]
+2026-05-02T22:22:03.127-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/address
+2026-05-02T22:22:03.129-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/address
+2026-05-02T22:22:03.129-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#findAll()
+2026-05-02T22:22:03.130-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando todos os endere�o
+2026-05-02T22:22:03.133-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.133-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AddressResponseDTO[id=6252c435-a1b7-4e88-8fdc-2fd7ccf438d5, cep=01001-000, rua=Praca da Se, numero= (truncated)...]
+2026-05-02T22:22:03.144-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/address/85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.146-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/address/85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.146-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#findById(UUID)
+2026-05-02T22:22:03.147-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando endere�o por ID: 85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.149-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.149-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AddressResponseDTO[id=85fc05f2-04cf-49fa-9ba0-e9003b467778, cep=01310-100, rua=Avenida Paulista, num (truncated)...]
+2026-05-02T22:22:03.150-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/address/85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.152-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/address/85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.152-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#updateAddress(UUID, AddressUpdateDTO)
+2026-05-02T22:22:03.155-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AddressUpdateDTO[cep=01311-000, rua=Rua Atualizada, numero=200, cidade=Sao Paulo, estado=SP]]
+2026-05-02T22:22:03.156-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando endere�o ID: 85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.163-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.163-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AddressResponseDTO[id=85fc05f2-04cf-49fa-9ba0-e9003b467778, cep=01311-000, rua=Rua Atualizada, numer (truncated)...]
+2026-05-02T22:22:03.165-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/v1/address/85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.166-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured DELETE /api/v1/address/85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.166-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#deleteAddress(UUID)
+2026-05-02T22:22:03.167-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Deletando endere�o ID: 85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.174-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.174-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-05-02T22:22:03.175-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/address/85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.177-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/address/85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.177-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.address.controller.AddressController#findById(UUID)
+2026-05-02T22:22:03.177-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando endere�o por ID: 85fc05f2-04cf-49fa-9ba0-e9003b467778
+2026-05-02T22:22:03.180-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler br.com.gastrohub.infra.exception.handle.GlobalExceptionHandler#handleNotFound(NotFoundException, HttpServletRequest)
+2026-05-02T22:22:03.186-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [*/*] and supported [application/problem+json]
+2026-05-02T22:22:03.187-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='https://api.gastrohub.com/errors/NOT_FOUND', title='Recurso n�o encontrado', sta (truncated)...]
+2026-05-02T22:22:03.188-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [br.com.gastrohub.infra.exception.NotFoundException: Endere�o n�o encontrado com id: 85fc05f2-04cf-49fa-9ba0-e9003b467778]
+2026-05-02T22:22:03.202-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
+2026-05-02T22:22:03.202-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.202-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
+2026-05-02T22:22:03.202-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
+2026-05-02T22:22:03.203-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Cliente Teste, email=cliente@email.com, login=cliente01, senha=123456, role=ROLE (truncated)...]
+2026-05-02T22:22:03.204-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
+2026-05-02T22:22:03.256-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.256-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=9a71c1f1-4914-4bf2-bb74-21e09d29fd05, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:03.258-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-05-02T22:22:03.258-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.258-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-05-02T22:22:03.258-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
+2026-05-02T22:22:03.258-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=123456]]
+2026-05-02T22:22:03.308-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.309-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=9a71c1f1-4914-4bf2-bb74-21e09d29fd05, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:03.310-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users
+2026-05-02T22:22:03.310-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.310-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users
+2026-05-02T22:22:03.311-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#findAll(Pageable)
+2026-05-02T22:22:03.314-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando todos os usu�rios
+2026-05-02T22:22:03.314-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando usu�rios - p�gina: 0, tamanho: 10
+2026-05-02T22:22:03.324-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.324-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 1 containing br.com.gastrohub.user.dto.response.UserResponseDTO instances]
+2026-05-02T22:22:03.329-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users/search
+2026-05-02T22:22:03.329-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.329-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users/search
+2026-05-02T22:22:03.330-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#searchByNome(String, Pageable)
+2026-05-02T22:22:03.333-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando  usu�rios com nomes
+2026-05-02T22:22:03.341-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.341-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Page 1 of 1 containing br.com.gastrohub.user.dto.response.UserResponseDTO instances]
+2026-05-02T22:22:03.342-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users/9a71c1f1-4914-4bf2-bb74-21e09d29fd05
+2026-05-02T22:22:03.343-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.343-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users/9a71c1f1-4914-4bf2-bb74-21e09d29fd05
+2026-05-02T22:22:03.343-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#findById(UUID)
+2026-05-02T22:22:03.343-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando usu�rio por ID: 9a71c1f1-4914-4bf2-bb74-21e09d29fd05
+2026-05-02T22:22:03.345-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.345-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=9a71c1f1-4914-4bf2-bb74-21e09d29fd05, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:03.346-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-05-02T22:22:03.346-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.346-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-05-02T22:22:03.347-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
+2026-05-02T22:22:03.347-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=123456]]
+2026-05-02T22:22:03.396-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.396-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=9a71c1f1-4914-4bf2-bb74-21e09d29fd05, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:03.397-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/9a71c1f1-4914-4bf2-bb74-21e09d29fd05
+2026-05-02T22:22:03.398-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/9a71c1f1-4914-4bf2-bb74-21e09d29fd05
+2026-05-02T22:22:03.399-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#updateUser(UUID, UserUpdateDTO)
+2026-05-02T22:22:03.401-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserUpdateDTO[nome=Cliente Atualizado, email=cliente.atualizado@email.com, login=cliente01, role=ROL (truncated)...]
+2026-05-02T22:22:03.404-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando usu�rio ID: 9a71c1f1-4914-4bf2-bb74-21e09d29fd05
+2026-05-02T22:22:03.409-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.409-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=9a71c1f1-4914-4bf2-bb74-21e09d29fd05, nome=Cliente Atualizado, email=cliente.atua (truncated)...]
+2026-05-02T22:22:03.417-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
+2026-05-02T22:22:03.418-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.418-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
+2026-05-02T22:22:03.418-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
+2026-05-02T22:22:03.419-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Cliente Teste, email=cliente@email.com, login=cliente01, senha=123456, role=ROLE (truncated)...]
+2026-05-02T22:22:03.419-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
+2026-05-02T22:22:03.472-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.472-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=83d5b00f-8e40-4893-b968-9fdd1138f6fc, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:03.473-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
+2026-05-02T22:22:03.473-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.474-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
+2026-05-02T22:22:03.474-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
+2026-05-02T22:22:03.474-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Outro Cliente, email=cliente@email.com, login=cliente02, senha=123456, role=ROLE (truncated)...]
+2026-05-02T22:22:03.475-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
+2026-05-02T22:22:03.476-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler br.com.gastrohub.infra.exception.handle.GlobalExceptionHandler#handleEmailAlreadyExists(EmailAlreadyExistsException, HttpServletRequest)
+2026-05-02T22:22:03.477-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [*/*] and supported [application/problem+json]
+2026-05-02T22:22:03.477-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='https://api.gastrohub.com/errors/EMAIL_ALREADY_EXISTS', title='Email j� cadastra (truncated)...]
+2026-05-02T22:22:03.477-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [br.com.gastrohub.infra.exception.EmailAlreadyExistsException: Email j� cadastrado: cliente@email.com]
+2026-05-02T22:22:03.478-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-05-02T22:22:03.478-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.478-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-05-02T22:22:03.478-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
+2026-05-02T22:22:03.478-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=senha-errada]]
+2026-05-02T22:22:03.529-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler br.com.gastrohub.infra.exception.handle.GlobalExceptionHandler#handleBusiness(BusinessException, HttpServletRequest)
+2026-05-02T22:22:03.529-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [*/*] and supported [application/problem+json]
+2026-05-02T22:22:03.529-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='https://api.gastrohub.com/errors/BUSINESS_RULE_VIOLATION', title='Erro de regra  (truncated)...]
+2026-05-02T22:22:03.529-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [br.com.gastrohub.infra.exception.BusinessException: Senha inv�lida]
+2026-05-02T22:22:03.538-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
+2026-05-02T22:22:03.538-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.538-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
+2026-05-02T22:22:03.538-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
+2026-05-02T22:22:03.538-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Cliente Teste, email=cliente@email.com, login=cliente01, senha=123456, role=ROLE (truncated)...]
+2026-05-02T22:22:03.539-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
+2026-05-02T22:22:03.590-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.590-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=f8eb5925-ce7d-4d79-a141-c4ba9768d999, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:03.592-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/users
+2026-05-02T22:22:03.592-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.592-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/users
+2026-05-02T22:22:03.592-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#createUser(UserRequestDTO, UriComponentsBuilder)
+2026-05-02T22:22:03.592-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDTO[nome=Dono Restaurante, email=dono@email.com, login=dono01, senha=123456, role=ROLE_DO (truncated)...]
+2026-05-02T22:22:03.593-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: dono@email.com
+2026-05-02T22:22:03.643-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.643-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDTO[id=bf1b13be-040c-48f1-b72b-92cf73b2e237, nome=Dono Restaurante, email=dono@email.com (truncated)...]
+2026-05-02T22:22:03.644-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-05-02T22:22:03.644-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.644-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-05-02T22:22:03.645-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
+2026-05-02T22:22:03.645-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=cliente01, senha=123456]]
+2026-05-02T22:22:03.694-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.694-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=f8eb5925-ce7d-4d79-a141-c4ba9768d999, nome=Cliente Teste, email=cliente@email.com (truncated)...]
+2026-05-02T22:22:03.695-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-05-02T22:22:03.695-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.695-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-05-02T22:22:03.695-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.AuthController#login(LoginRequestDTO)
+2026-05-02T22:22:03.696-03:00 DEBUG 9504 --- [gastrohub] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequestDTO[login=dono01, senha=123456]]
+2026-05-02T22:22:03.747-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.747-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponseDTO[id=bf1b13be-040c-48f1-b72b-92cf73b2e237, nome=Dono Restaurante, email=dono@email.com (truncated)...]
+2026-05-02T22:22:03.749-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/v1/users/f8eb5925-ce7d-4d79-a141-c4ba9768d999
+2026-05-02T22:22:03.750-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2026-05-02T22:22:03.751-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/v1/users/f8eb5925-ce7d-4d79-a141-c4ba9768d999
+2026-05-02T22:22:03.752-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured DELETE /api/v1/users/f8eb5925-ce7d-4d79-a141-c4ba9768d999
+2026-05-02T22:22:03.752-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#deleteUser(UUID)
+2026-05-02T22:22:03.752-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Deletando usu�rio ID: f8eb5925-ce7d-4d79-a141-c4ba9768d999
+2026-05-02T22:22:03.756-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-02T22:22:03.756-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-05-02T22:22:03.757-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users/f8eb5925-ce7d-4d79-a141-c4ba9768d999
+2026-05-02T22:22:03.757-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-05-02T22:22:03.757-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users/f8eb5925-ce7d-4d79-a141-c4ba9768d999
+2026-05-02T22:22:03.757-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.gastrohub.user.controller.UserController#findById(UUID)
+2026-05-02T22:22:03.758-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando usu�rio por ID: f8eb5925-ce7d-4d79-a141-c4ba9768d999
+2026-05-02T22:22:03.758-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler br.com.gastrohub.infra.exception.handle.GlobalExceptionHandler#handleNotFound(NotFoundException, HttpServletRequest)
+2026-05-02T22:22:03.758-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json', given [*/*] and supported [application/problem+json]
+2026-05-02T22:22:03.758-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='https://api.gastrohub.com/errors/NOT_FOUND', title='Recurso n�o encontrado', sta (truncated)...]
+2026-05-02T22:22:03.759-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [br.com.gastrohub.infra.exception.NotFoundException: Usu�rio n�o encontrado com id: f8eb5925-ce7d-4d79-a141-c4ba9768d999]
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.689 s -- in br.com.gastrohub.ApiIntegrationTest
 [INFO] Running br.com.gastrohub.GastrohubApplicationTests
-2026-05-01T15:43:05.842-03:00  INFO 33636 --- [gastrohub] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.com.gastrohub.GastrohubApplicationTests]: GastrohubApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-05-01T15:43:05.844-03:00  INFO 33636 --- [gastrohub] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration br.com.gastrohub.GastrohubApplication for test class br.com.gastrohub.GastrohubApplicationTests
+2026-05-02T22:22:03.764-03:00  INFO 9504 --- [gastrohub] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.com.gastrohub.GastrohubApplicationTests]: GastrohubApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:22:03.764-03:00  INFO 9504 --- [gastrohub] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration br.com.gastrohub.GastrohubApplication for test class br.com.gastrohub.GastrohubApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -298,66 +300,68 @@ WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v3.2.12)
 
-2026-05-01T15:43:05.874-03:00  INFO 33636 --- [gastrohub] [           main] b.c.gastrohub.GastrohubApplicationTests  : Starting GastrohubApplicationTests using Java 25.0.2 with PID 33636 (started by vine in C:\Users\vine\Desktop\Workspace\projetos\java\gastrohub)
-2026-05-01T15:43:05.874-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.gastrohub.GastrohubApplicationTests  : Running with Spring Boot v3.2.12, Spring v6.1.15
-2026-05-01T15:43:05.874-03:00  INFO 33636 --- [gastrohub] [           main] b.c.gastrohub.GastrohubApplicationTests  : The following 1 profile is active: "test"
-2026-05-01T15:43:05.876-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@61b06782
-2026-05-01T15:43:06.056-03:00  INFO 33636 --- [gastrohub] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-01T15:43:06.092-03:00  INFO 33636 --- [gastrohub] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
-2026-05-01T15:43:06.179-03:00  INFO 33636 --- [gastrohub] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-05-01T15:43:06.181-03:00  INFO 33636 --- [gastrohub] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-05-01T15:43:06.186-03:00  INFO 33636 --- [gastrohub] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-01T15:43:06.187-03:00  INFO 33636 --- [gastrohub] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-05-01T15:43:06.188-03:00  INFO 33636 --- [gastrohub] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:gastrohub_test user=SA
-2026-05-01T15:43:06.188-03:00  INFO 33636 --- [gastrohub] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-05-01T15:43:06.188-03:00  WARN 33636 --- [gastrohub] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-01T15:43:06.255-03:00  INFO 33636 --- [gastrohub] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-01T15:43:06.261-03:00  INFO 33636 --- [gastrohub] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-01T15:43:06.342-03:00  WARN 33636 --- [gastrohub] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-01T15:43:06.348-03:00  WARN 33636 --- [gastrohub] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-05-02T22:22:03.783-03:00  INFO 9504 --- [gastrohub] [           main] b.c.gastrohub.GastrohubApplicationTests  : Starting GastrohubApplicationTests using Java 25.0.2 with PID 9504 (started by vine in C:\Users\vine\Desktop\Workspace\projetos\java\gastrohub)
+2026-05-02T22:22:03.783-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.gastrohub.GastrohubApplicationTests  : Running with Spring Boot v3.2.12, Spring v6.1.15
+2026-05-02T22:22:03.783-03:00  INFO 9504 --- [gastrohub] [           main] b.c.gastrohub.GastrohubApplicationTests  : The following 1 profile is active: "test"
+2026-05-02T22:22:03.784-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@66c70e18
+2026-05-02T22:22:03.892-03:00  INFO 9504 --- [gastrohub] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T22:22:03.910-03:00  INFO 9504 --- [gastrohub] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-05-02T22:22:03.960-03:00  INFO 9504 --- [gastrohub] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-02T22:22:03.963-03:00  INFO 9504 --- [gastrohub] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-02T22:22:03.966-03:00  INFO 9504 --- [gastrohub] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T22:22:03.966-03:00  INFO 9504 --- [gastrohub] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-05-02T22:22:03.967-03:00  INFO 9504 --- [gastrohub] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:gastrohub_test user=SA
+2026-05-02T22:22:03.967-03:00  INFO 9504 --- [gastrohub] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-05-02T22:22:03.967-03:00  WARN 9504 --- [gastrohub] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T22:22:04.000-03:00  INFO 9504 --- [gastrohub] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T22:22:04.005-03:00  INFO 9504 --- [gastrohub] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T22:22:04.053-03:00  WARN 9504 --- [gastrohub] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T22:22:04.064-03:00  WARN 9504 --- [gastrohub] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 5bbcf41e-55e2-4d69-bd6d-f671566e5336
+Using generated security password: 304099ba-d3c9-4632-900c-6cf5ec577419
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-05-01T15:43:06.374-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
-2026-05-01T15:43:06.408-03:00 DEBUG 33636 --- [gastrohub] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-05-01T15:43:06.417-03:00  INFO 33636 --- [gastrohub] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@29d534ce, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a3761a, org.springframework.security.web.context.SecurityContextHolderFilter@2ba3b4a6, org.springframework.security.web.header.HeaderWriterFilter@6d553763, org.springframework.security.web.authentication.logout.LogoutFilter@21d131e7, br.com.gastrohub.infra.security.JwtAuthenticationFilter@509cf73a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44473749, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@edfe8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5aaab2b0, org.springframework.security.web.session.SessionManagementFilter@5278bc6d, org.springframework.security.web.access.ExceptionTranslationFilter@7263ad06, org.springframework.security.web.access.intercept.AuthorizationFilter@3327337a]
-2026-05-01T15:43:06.463-03:00 DEBUG 33636 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-05-01T15:43:06.472-03:00 DEBUG 33636 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-05-01T15:43:06.542-03:00  INFO 33636 --- [gastrohub] [           main] b.c.gastrohub.GastrohubApplicationTests  : Started GastrohubApplicationTests in 0.695 seconds (process running for 8.231)
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.710 s -- in br.com.gastrohub.GastrohubApplicationTests
+2026-05-02T22:22:04.080-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 20 mappings in 'requestMappingHandlerMapping'
+2026-05-02T22:22:04.106-03:00 DEBUG 9504 --- [gastrohub] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-05-02T22:22:04.114-03:00  INFO 9504 --- [gastrohub] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67620d80, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c63aa5d, org.springframework.security.web.context.SecurityContextHolderFilter@3f4b52fa, org.springframework.security.web.header.HeaderWriterFilter@152a41ab, org.springframework.security.web.authentication.logout.LogoutFilter@75f1c170, br.com.gastrohub.infra.security.JwtAuthenticationFilter@67a2fb00, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3468faa5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7308c29a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6145981c, org.springframework.security.web.session.SessionManagementFilter@5a372288, org.springframework.security.web.access.ExceptionTranslationFilter@23551fa1, org.springframework.security.web.access.intercept.AuthorizationFilter@3316aef6]
+2026-05-02T22:22:04.139-03:00 DEBUG 9504 --- [gastrohub] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-05-02T22:22:04.141-03:00 DEBUG 9504 --- [gastrohub] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-05-02T22:22:04.170-03:00  INFO 9504 --- [gastrohub] [           main] b.c.gastrohub.GastrohubApplicationTests  : Started GastrohubApplicationTests in 0.404 seconds (process running for 5.467)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.411 s -- in br.com.gastrohub.GastrohubApplicationTests
 [INFO] Running br.com.gastrohub.user.service.AuthServiceImplTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.369 s -- in br.com.gastrohub.user.service.AuthServiceImplTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.254 s -- in br.com.gastrohub.user.service.AuthServiceImplTest
 [INFO] Running br.com.gastrohub.user.service.UserServiceImplTest
-2026-05-01T15:43:07.051-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando usu�rio por ID: 3f8882d5-4b66-47a0-a15d-6b47db246fe4
-2026-05-01T15:43:07.055-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
-2026-05-01T15:43:07.060-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando usu�rio ID: 13907552-c7b5-44e7-9e00-9052a25d253f
-2026-05-01T15:43:07.063-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Deletando usu�rio ID: bd226530-a73d-4119-a8b1-4f337b56daa5
-2026-05-01T15:43:07.066-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando usu�rio ID: a499e79e-dafa-49f9-a59d-e7b3b52756a7
-2026-05-01T15:43:07.071-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Deletando usu�rio ID: 87a1689e-1bb6-473c-9b72-8f66bf099676
-2026-05-01T15:43:07.075-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando todos os usu�rios
-2026-05-01T15:43:07.075-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando usu�rios - p�gina: 0, tamanho: 10
-2026-05-01T15:43:07.086-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando usu�rio por ID: 1bc72375-746b-4f89-b5c2-9eb44041a17e
-2026-05-01T15:43:07.088-03:00 DEBUG 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
-2026-05-01T15:43:07.093-03:00  INFO 33636 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando  usu�rios com nomes
-[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 s -- in br.com.gastrohub.user.service.UserServiceImplTest
+2026-05-02T22:22:04.503-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando usu�rio por ID: 3a16e178-b10b-4624-be5b-1a3cfc4763c6
+2026-05-02T22:22:04.507-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
+2026-05-02T22:22:04.509-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando usu�rio ID: 8ca040eb-e156-4db3-a3d1-53d5025433ac
+2026-05-02T22:22:04.511-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Deletando usu�rio ID: 56fa7549-66c3-4b36-bbfc-4b54d7a1bb66
+2026-05-02T22:22:04.513-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando usu�rio ID: ed6ffc81-cff0-4990-927f-acc98b1adbd9
+2026-05-02T22:22:04.515-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Deletando usu�rio ID: f6127c52-379a-4196-ac48-d698d151a396
+2026-05-02T22:22:04.517-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando todos os usu�rios
+2026-05-02T22:22:04.517-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Listando usu�rios - p�gina: 0, tamanho: 10
+2026-05-02T22:22:04.525-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando Senha de usu�rio
+2026-05-02T22:22:04.527-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando usu�rio por ID: ce142f58-f1fb-44a0-b5e6-5808c12a1a64
+2026-05-02T22:22:04.529-03:00 DEBUG 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Criando usu�rio com email: cliente@email.com
+2026-05-02T22:22:04.531-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Atualizando Senha de usu�rio
+2026-05-02T22:22:04.535-03:00  INFO 9504 --- [gastrohub] [           main] b.c.g.user.service.UserServiceImpl       : Buscando  usu�rios com nomes
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 s -- in br.com.gastrohub.user.service.UserServiceImplTest
 [INFO] Running br.com.gastrohub.user.strategy.UserEmailExistsValidatorTest
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in br.com.gastrohub.user.strategy.UserEmailExistsValidatorTest
 [INFO] Running br.com.gastrohub.user.strategy.UserEmailUpdateValidatorTest
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in br.com.gastrohub.user.strategy.UserEmailUpdateValidatorTest
 [INFO] Running br.com.gastrohub.user.strategy.UserLoginExistsValidatorTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in br.com.gastrohub.user.strategy.UserLoginExistsValidatorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in br.com.gastrohub.user.strategy.UserLoginExistsValidatorTest
 [INFO] Running br.com.gastrohub.user.strategy.UserLoginUpdateValidatorTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in br.com.gastrohub.user.strategy.UserLoginUpdateValidatorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in br.com.gastrohub.user.strategy.UserLoginUpdateValidatorTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.024 s
-[INFO] Finished at: 2026-05-01T15:43:07-03:00
+[INFO] Total time:  8.454 s
+[INFO] Finished at: 2026-05-02T22:22:04-03:00
 [INFO] ------------------------------------------------------------------------

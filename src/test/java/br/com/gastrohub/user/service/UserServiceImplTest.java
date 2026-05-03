@@ -2,6 +2,7 @@ package br.com.gastrohub.user.service;
 
 import br.com.gastrohub.address.dto.request.AddressRequestDTO;
 import br.com.gastrohub.infra.exception.NotFoundException;
+import br.com.gastrohub.user.dto.request.UpdatePasswordRequest;
 import br.com.gastrohub.user.dto.request.UserRequestDTO;
 import br.com.gastrohub.user.dto.request.UserUpdateDTO;
 import br.com.gastrohub.user.dto.response.UserResponseDTO;
@@ -219,6 +220,39 @@ class UserServiceImplTest {
                 .hasMessageContaining(id.toString());
 
         verify(userRepository, never()).delete(org.mockito.ArgumentMatchers.any(User.class));
+    }
+
+    @Test
+    void updatePassword_deveCodificarESalvarNovaSenha() {
+        UUID id = UUID.randomUUID();
+        User user = user(id);
+        UpdatePasswordRequest request = new UpdatePasswordRequest("novaSenha123");
+
+        when(userRepository.getById(id)).thenReturn(user);
+        when(passwordEncoder.encode(request.password())).thenReturn("nova-senha-criptografada");
+
+        service.updatePassword(request, id);
+
+        assertThat(user.getSenha()).isEqualTo("nova-senha-criptografada");
+        verify(userRepository).getById(id);
+        verify(passwordEncoder).encode("novaSenha123");
+        verify(userRepository).save(user);
+    }
+
+    @Test
+    void updatePassword_deveAtualizarDataUltimaAlteracao() {
+        UUID id = UUID.randomUUID();
+        User user = user(id);
+        LocalDateTime dataAnterior = user.getDataUltimaAlteracao();
+        UpdatePasswordRequest request = new UpdatePasswordRequest("novaSenha123");
+
+        when(userRepository.getById(id)).thenReturn(user);
+        when(passwordEncoder.encode(request.password())).thenReturn("nova-senha-criptografada");
+
+        service.updatePassword(request, id);
+
+        assertThat(user.getDataUltimaAlteracao()).isAfter(dataAnterior);
+        verify(userRepository).save(user);
     }
 
     private UserRequestDTO userRequest() {

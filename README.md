@@ -53,7 +53,7 @@ O modulo `notification` escuta eventos de usuario criado e envia e-mail de boas-
 | PUT | `/api/v1/users/{id}` | Atualiza dados do usuario | Bearer JWT (`ROLE_CLIENTE` ou `ROLE_DONO_RESTAURANTE`) |
 | DELETE | `/api/v1/users/{id}` | Remove usuario | Bearer JWT (`ROLE_DONO_RESTAURANTE`) |
 | POST | `/api/v1/auth/login` | Autentica usuario e retorna token JWT | Publico |
-| PATCH | `/api/v1/auth/password/{userID}` | Troca de senha | Em integracao no PR #14; endpoint nao esta presente nesta branch |
+| PATCH | `/api/v1/auth/password/{userID}` | Troca de senha | Publico |
 | POST | `/api/v1/address` | Cria endereco para o usuario autenticado | Bearer JWT |
 | GET | `/api/v1/address` | Lista enderecos | Bearer JWT |
 | GET | `/api/v1/address/{id}` | Busca endereco por ID | Bearer JWT |
@@ -131,13 +131,13 @@ Execute um teste especifico:
 ./mvnw test -Dtest=UserServiceImplTest
 ```
 
-O projeto possui testes unitarios com JUnit 5 e Mockito para services e validators de usuario, somando 21 cenarios unitarios nesta entrega.
+O projeto possui testes unitarios com JUnit 5 e Mockito para services e validators de usuario, somando 23 cenarios unitarios nesta entrega.
 Tambem ha testes de integracao com `@SpringBootTest`, MockMvc e H2 cobrindo fluxos E2E da API.
 
 Resultado validado nesta branch:
 
 ```text
-Tests run: 27, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 0
 BUILD SUCCESS
 ```
 
