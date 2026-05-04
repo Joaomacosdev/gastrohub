@@ -121,8 +121,8 @@ public class UserServiceImpl implements UserCommandService, UserQueryService {
     @Override
     public void updatePassword(UpdatePasswordRequest updatePassword, UUID userID) {
         logger.info("Atualizando Senha de usuário");
-        var userToUpdate = userRepository.getById(userID);
-        userToUpdate.setSenha(passwordEncoder.encode(updatePassword.password()));
+        var userToUpdate = searchUser(userID);
+        userToUpdate.changeSenha(passwordEncoder.encode(updatePassword.password()));
         userToUpdate.setDataUltimaAlteracao(LocalDateTime.now());
         userRepository.save(userToUpdate);
     }

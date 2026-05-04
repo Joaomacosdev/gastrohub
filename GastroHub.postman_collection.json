@@ -1,0 +1,532 @@
+{
+  "info": {
+    "_postman_id": "7d5e2b67-0c45-4df8-8c1b-8d8eec2a3f08",
+    "name": "GastroHub API",
+    "description": "Collection reexecutavel para testar os fluxos principais e os cenarios obrigatorios do Tech Challenge Fase 1.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "if (!pm.collectionVariables.get('run_id')) {",
+          "  const runId = Date.now().toString();",
+          "  pm.collectionVariables.set('run_id', runId);",
+          "  pm.collectionVariables.set('client_name', 'Cliente Teste ' + runId);",
+          "  pm.collectionVariables.set('client_email', 'cliente.' + runId + '@email.com');",
+          "  pm.collectionVariables.set('client_updated_email', 'cliente.atualizado.' + runId + '@email.com');",
+          "  pm.collectionVariables.set('client_login', 'cliente' + runId);",
+          "  pm.collectionVariables.set('owner_name', 'Dono Restaurante ' + runId);",
+          "  pm.collectionVariables.set('owner_email', 'dono.' + runId + '@email.com');",
+          "  pm.collectionVariables.set('owner_login', 'dono' + runId);",
+          "  pm.collectionVariables.set('duplicate_login', 'duplicado' + runId);",
+          "}"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:8080" },
+    { "key": "run_id", "value": "" },
+    { "key": "token", "value": "" },
+    { "key": "owner_token", "value": "" },
+    { "key": "user_id", "value": "" },
+    { "key": "owner_id", "value": "" },
+    { "key": "address_id", "value": "" },
+    { "key": "missing_user_id", "value": "00000000-0000-0000-0000-000000000000" },
+    { "key": "client_name", "value": "" },
+    { "key": "client_email", "value": "" },
+    { "key": "client_updated_email", "value": "" },
+    { "key": "client_login", "value": "" },
+    { "key": "owner_name", "value": "" },
+    { "key": "owner_email", "value": "" },
+    { "key": "owner_login", "value": "" },
+    { "key": "duplicate_login", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Health & Docs",
+      "item": [
+        {
+          "name": "Ping",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/ping"
+          }
+        },
+        {
+          "name": "OpenAPI JSON",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "pm.test('Retorna documento OpenAPI', function () { pm.expect(pm.response.json().openapi).to.exist; });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/v3/api-docs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Cadastrar Cliente",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 201', function () { pm.response.to.have.status(201); });",
+                  "const json = pm.response.json();",
+                  "pm.collectionVariables.set('user_id', json.id);",
+                  "if (json.address && json.address.length && json.address[0].id) pm.collectionVariables.set('address_id', json.address[0].id);",
+                  "pm.test('Cadastra usuario cliente', function () { pm.expect(json.role).to.eql('ROLE_CLIENTE'); pm.expect(json.senha).to.be.undefined; });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"{{client_name}}\",\n  \"email\": \"{{client_email}}\",\n  \"login\": \"{{client_login}}\",\n  \"senha\": \"123456\",\n  \"role\": \"ROLE_CLIENTE\",\n  \"address\": [\n    {\n      \"cep\": \"01001-000\",\n      \"rua\": \"Praca da Se\",\n      \"numero\": \"100\",\n      \"cidade\": \"Sao Paulo\",\n      \"estado\": \"SP\"\n    }\n  ]\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/users"
+          }
+        },
+        {
+          "name": "Cadastrar Dono Restaurante",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 201', function () { pm.response.to.have.status(201); });",
+                  "const json = pm.response.json();",
+                  "pm.collectionVariables.set('owner_id', json.id);",
+                  "pm.test('Cadastra dono de restaurante', function () { pm.expect(json.role).to.eql('ROLE_DONO_RESTAURANTE'); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"{{owner_name}}\",\n  \"email\": \"{{owner_email}}\",\n  \"login\": \"{{owner_login}}\",\n  \"senha\": \"123456\",\n  \"role\": \"ROLE_DONO_RESTAURANTE\",\n  \"address\": [\n    {\n      \"cep\": \"01310-100\",\n      \"rua\": \"Avenida Paulista\",\n      \"numero\": \"1000\",\n      \"cidade\": \"Sao Paulo\",\n      \"estado\": \"SP\"\n    }\n  ]\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/users"
+          }
+        },
+        {
+          "name": "Listar Usuarios",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] } }],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/v1/users?page=0&size=10&sort=nome"
+          }
+        },
+        {
+          "name": "Buscar Usuario Por ID",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] } }],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/v1/users/{{user_id}}"
+          }
+        },
+        {
+          "name": "Buscar Usuario Por Nome",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] } }],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/v1/users/search?nome={{client_name}}&page=0&size=10"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Autenticacao",
+      "item": [
+        {
+          "name": "Login Cliente",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "const json = pm.response.json();",
+                  "pm.collectionVariables.set('token', json.token);",
+                  "pm.collectionVariables.set('user_id', json.id);",
+                  "pm.test('Retorna JWT', function () { pm.expect(json.token).to.be.a('string').and.not.empty; });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"login\": \"{{client_login}}\",\n  \"senha\": \"123456\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/auth/login"
+          }
+        },
+        {
+          "name": "Login Dono Restaurante",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "const json = pm.response.json();",
+                  "pm.collectionVariables.set('owner_token', json.token);",
+                  "pm.collectionVariables.set('owner_id', json.id);",
+                  "pm.test('Retorna JWT de dono', function () { pm.expect(json.role).to.eql('ROLE_DONO_RESTAURANTE'); pm.expect(json.token).to.be.a('string').and.not.empty; });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"login\": \"{{owner_login}}\",\n  \"senha\": \"123456\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/auth/login"
+          }
+        },
+        {
+          "name": "Alterar Senha",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 204', function () { pm.response.to.have.status(204); });"] } }],
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"password\": \"novaSenha123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/auth/password/{{user_id}}"
+          }
+        },
+        {
+          "name": "Login Cliente Com Nova Senha",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "const json = pm.response.json();",
+                  "pm.collectionVariables.set('token', json.token);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"login\": \"{{client_login}}\",\n  \"senha\": \"novaSenha123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/auth/login"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Usuarios Autenticados",
+      "item": [
+        {
+          "name": "Atualizar Usuario",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "const json = pm.response.json();",
+                  "pm.test('Atualiza dados sem senha', function () { pm.expect(json.nome).to.eql('Cliente Atualizado'); pm.expect(json.senha).to.be.undefined; });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Cliente Atualizado\",\n  \"email\": \"{{client_updated_email}}\",\n  \"login\": \"{{client_login}}\",\n  \"role\": \"ROLE_CLIENTE\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/users/{{user_id}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enderecos",
+      "item": [
+        {
+          "name": "Criar Endereco",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 201', function () { pm.response.to.have.status(201); });",
+                  "const json = pm.response.json();",
+                  "pm.collectionVariables.set('address_id', json.id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cep\": \"01310-100\",\n  \"rua\": \"Avenida Paulista\",\n  \"numero\": \"1000\",\n  \"cidade\": \"Sao Paulo\",\n  \"estado\": \"SP\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/address"
+          }
+        },
+        {
+          "name": "Listar Enderecos",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] } }],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/v1/address"
+          }
+        },
+        {
+          "name": "Buscar Endereco Por ID",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] } }],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/v1/address/{{address_id}}"
+          }
+        },
+        {
+          "name": "Atualizar Endereco",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] } }],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cep\": \"01311-000\",\n  \"rua\": \"Rua Atualizada\",\n  \"numero\": \"200\",\n  \"cidade\": \"Sao Paulo\",\n  \"estado\": \"SP\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/address/{{address_id}}"
+          }
+        },
+        {
+          "name": "Deletar Endereco",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 204', function () { pm.response.to.have.status(204); });"] } }],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "DELETE",
+            "header": [],
+            "url": "{{base_url}}/api/v1/address/{{address_id}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cenarios de Erro",
+      "item": [
+        {
+          "name": "Cadastro Invalido - Email Duplicado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 409', function () { pm.response.to.have.status(409); });",
+                  "const json = pm.response.json();",
+                  "pm.test('ProblemDetail de email duplicado', function () { pm.expect(json.code).to.eql('EMAIL_ALREADY_EXISTS'); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Cliente Duplicado\",\n  \"email\": \"{{client_updated_email}}\",\n  \"login\": \"{{duplicate_login}}\",\n  \"senha\": \"123456\",\n  \"role\": \"ROLE_CLIENTE\",\n  \"address\": [\n    {\n      \"cep\": \"01001-000\",\n      \"rua\": \"Praca da Se\",\n      \"numero\": \"100\",\n      \"cidade\": \"Sao Paulo\",\n      \"estado\": \"SP\"\n    }\n  ]\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/users"
+          }
+        },
+        {
+          "name": "Cadastro Invalido - Campos Obrigatorios Faltando",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 400', function () { pm.response.to.have.status(400); });"] } }],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"\",\n  \"email\": \"email-invalido\",\n  \"login\": \"ab\",\n  \"senha\": \"123\",\n  \"role\": null,\n  \"address\": []\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/users"
+          }
+        },
+        {
+          "name": "Login Invalido - Senha Incorreta",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 422', function () { pm.response.to.have.status(422); });",
+                  "const json = pm.response.json();",
+                  "pm.test('ProblemDetail de regra de negocio', function () { pm.expect(json.code).to.eql('BUSINESS_RULE_VIOLATION'); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"login\": \"{{client_login}}\",\n  \"senha\": \"senha-errada\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/auth/login"
+          }
+        },
+        {
+          "name": "Alterar Senha Com Erro - Usuario Inexistente",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 404', function () { pm.response.to.have.status(404); });"] } }],
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"password\": \"novaSenha123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/auth/password/{{missing_user_id}}"
+          }
+        },
+        {
+          "name": "Atualizar Dados Com Erro - Usuario Inexistente",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 404', function () { pm.response.to.have.status(404); });",
+                  "const json = pm.response.json();",
+                  "pm.test('ProblemDetail de recurso nao encontrado', function () { pm.expect(json.code).to.eql('NOT_FOUND'); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Usuario Inexistente\",\n  \"email\": \"inexistente.{{run_id}}@email.com\",\n  \"login\": \"inexistente{{run_id}}\",\n  \"role\": \"ROLE_CLIENTE\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/users/{{missing_user_id}}"
+          }
+        },
+        {
+          "name": "Atualizar Dados Com Erro - Sem Token",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 401 ou 403', function () { pm.expect([401, 403]).to.include(pm.response.code); });"] } }],
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Cliente Sem Token\",\n  \"email\": \"sem.token.{{run_id}}@email.com\",\n  \"login\": \"semtoken{{run_id}}\",\n  \"role\": \"ROLE_CLIENTE\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/v1/users/{{user_id}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Limpeza",
+      "item": [
+        {
+          "name": "Deletar Usuario Cliente",
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 204', function () { pm.response.to.have.status(204); });"] } }],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{owner_token}}", "type": "string" }] },
+            "method": "DELETE",
+            "header": [],
+            "url": "{{base_url}}/api/v1/users/{{user_id}}"
+          }
+        }
+      ]
+    }
+  ]
+}

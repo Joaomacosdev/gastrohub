@@ -228,13 +228,13 @@ class UserServiceImplTest {
         User user = user(id);
         UpdatePasswordRequest request = new UpdatePasswordRequest("novaSenha123");
 
-        when(userRepository.getById(id)).thenReturn(user);
+        when(userRepository.findById(id)).thenReturn(Optional.of(user));
         when(passwordEncoder.encode(request.password())).thenReturn("nova-senha-criptografada");
 
         service.updatePassword(request, id);
 
         assertThat(user.getSenha()).isEqualTo("nova-senha-criptografada");
-        verify(userRepository).getById(id);
+        verify(userRepository).findById(id);
         verify(passwordEncoder).encode("novaSenha123");
         verify(userRepository).save(user);
     }
@@ -246,7 +246,7 @@ class UserServiceImplTest {
         LocalDateTime dataAnterior = user.getDataUltimaAlteracao();
         UpdatePasswordRequest request = new UpdatePasswordRequest("novaSenha123");
 
-        when(userRepository.getById(id)).thenReturn(user);
+        when(userRepository.findById(id)).thenReturn(Optional.of(user));
         when(passwordEncoder.encode(request.password())).thenReturn("nova-senha-criptografada");
 
         service.updatePassword(request, id);

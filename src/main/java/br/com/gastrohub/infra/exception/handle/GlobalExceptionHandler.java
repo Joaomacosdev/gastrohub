@@ -2,10 +2,15 @@ package br.com.gastrohub.infra.exception.handle;
 
 import br.com.gastrohub.infra.exception.*;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.util.stream.Collectors;
 
 
 @RestControllerAdvice
@@ -53,6 +58,50 @@ public class GlobalExceptionHandler {
                 "VALIDATION_ERROR",
                 "Erro de validação",
                 ex.getMessage(),
+                request.getRequestURI()
+        );
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ProblemDetail handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpServletRequest request) {
+        String detail = ex.getBindingResult()
+                .getFieldErrors()
+                .stream()
+                .map(error -> error.getField() + ": " + error.getDefaultMessage())
+                .collect(Collectors.joining("; "));
+
+        return ProblemDetailFactory.create(
+                HttpStatus.BAD_REQUEST,
+                "VALIDATION_ERROR",
+                "Erro de validação",
+                detail.isBlank() ? "Dados de entrada inválidos" : detail,
+                request.getRequestURI()
+        );
+    }
+
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ProblemDetail handleConstraintViolation(ConstraintViolationException ex, HttpServletRequest request) {
+        String detail = ex.getConstraintViolations()
+                .stream()
+                .map(violation -> violation.getPropertyPath() + ": " + violation.getMessage())
+                .collect(Collectors.joining("; "));
+
+        return ProblemDetailFactory.create(
+                HttpStatus.BAD_REQUEST,
+                "VALIDATION_ERROR",
+                "Erro de validação",
+                detail.isBlank() ? "Dados de entrada inválidos" : detail,
+                request.getRequestURI()
+        );
+    }
+
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ProblemDetail handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpServletRequest request) {
+        return ProblemDetailFactory.create(
+                HttpStatus.BAD_REQUEST,
+                "VALIDATION_ERROR",
+                "Erro de validação",
+                "Corpo da requisição inválido ou mal formatado",
                 request.getRequestURI()
         );
     }
