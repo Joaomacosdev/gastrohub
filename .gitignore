@@ -1,1 +1,18 @@
+target/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
 .env
+.claude/
+docs/relatorio/

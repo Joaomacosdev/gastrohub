@@ -1,12 +1,11 @@
-version: '3,9'
+version: '3.9'
 
 volumes:
   mysql_data: {}
 
 services:
  mysql:
-   image:
-     mysql:8.0
+   image: mysql:8.0
    restart: always
    volumes:
      - mysql_data:/var/lib/mysql
@@ -17,17 +16,28 @@ services:
      MYSQL_PASSWORD: ${DB_PASSWORD}
    ports:
      - "3309:3306"
+   healthcheck:
+     test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "${DB_USER}", "-p${DB_PASSWORD}"]
+     interval: 10s
+     timeout: 5s
+     retries: 5
+     start_period: 30s
  app:
    depends_on:
-     - mysql
+     mysql:
+       condition: service_healthy
    build:
      context: .
      dockerfile: Dockerfile
    ports:
      - "8080:8080"
    environment:
-     SPRING_DATASOURCE_URL: jdbc:mysql://mysql:${DB_PORT}/${DB_NAME}
+     SPRING_DATASOURCE_URL: jdbc:mysql://mysql:${DB_PORT}/${DB_NAME}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
      SPRING_DATASOURCE_USERNAME: ${DB_USER}
      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-
+     SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQLDialect
+     MAIL_USER: ${MAIL_USER}
+     MAIL_PASSWORD: ${MAIL_PASSWORD}
+     JWT_SECRET: ${JWT_SECRET}
+     JWT_EXPIRATION: ${JWT_EXPIRATION}
